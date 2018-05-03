@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import MyRouter from './router/router'
 
-import './assets/css/common.scss'
+import './assets/css/common.less'
 
 import registerServiceWorker from './registerServiceWorker';
 

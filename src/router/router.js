@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import store from '../store/index.js'
 
 import Platform from "../modules/platform/Platform";
+import Home from "../modules/platform/home/Home";
 import Login from "../modules/login/Login";
 
 export default class MyRouter extends Component {
@@ -28,8 +29,10 @@ export default class MyRouter extends Component {
         return (
             <Provider store={store}>
                 <Router history={browserHistory}>
-                    <Redirect from="/" to="/platform" />
-                    <Route path="/platform" component={Platform} onEnter={this.enter.bind(this)} onLeave={this.leave.bind(this)}/>
+                    <Redirect from="/" to="/platform/home" />
+                    <Route path="/platform" component={Platform}>
+                        <Route path="/platform/home" component={Home}/>
+                    </Route>
                     <Route path="/login" component={Login}/>
                 </Router>
             </Provider>

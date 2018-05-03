@@ -10,7 +10,6 @@ export const setPageTitle = (data) => {
 export const setInfoList = () => {
     return async (dispatch, getState) => {
         let data = await news_getTableData();
-        console.log(getState);
         dispatch({ type: 'SET_INFO_LIST', data: data.data });
     }
 };
