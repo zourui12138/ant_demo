@@ -13,3 +13,5 @@ export const setInfoList = () => {
         dispatch({ type: 'SET_INFO_LIST', data: data.data });
     }
 };
+
+export const toggleCurrentNav = (data) => (dispatch) => {dispatch({type:'TOGGLE_CURRENT_NAV',data:data})};

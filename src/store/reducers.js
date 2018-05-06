@@ -24,5 +24,15 @@ const infoList = (state = defaultState.infoList, action) => {
     }
 };
 
+const currentNav = (state = defaultState.currentNav, action) => {
+    // 不同的action有不同的处理逻辑
+    switch (action.type) {
+        case 'TOGGLE_CURRENT_NAV':
+            return action.data;
+        default:
+            return state
+    }
+};
+
 // 导出所有reducer
-export default combineReducers({pageTitle, infoList});
+export default combineReducers({pageTitle, infoList, currentNav});

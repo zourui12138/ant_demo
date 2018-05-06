@@ -9,6 +9,7 @@ import store from '../store/index.js'
 
 import Platform from "../modules/platform/Platform";
 import Home from "../modules/platform/home/Home";
+import Environment from "../modules/platform/environment/Environment";
 import Login from "../modules/login/Login";
 
 export default class MyRouter extends Component {
@@ -32,6 +33,7 @@ export default class MyRouter extends Component {
                     <Redirect from="/" to="/platform/home" />
                     <Route path="/platform" component={Platform}>
                         <Route path="/platform/home" component={Home}/>
+                        <Route path="/platform/environment" component={Environment}/>
                     </Route>
                     <Route path="/login" component={Login}/>
                 </Router>
